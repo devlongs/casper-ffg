@@ -1,6 +1,7 @@
 package blockchain
 
 import (
+	"encoding/binary"
 	"time"
 
 	"github.com/devlongs/casper-ffg/utils"
@@ -34,5 +35,11 @@ func NewBlock(height int, parentHash []byte) *Block {
 }
 
 func (b *Block) Bytes() []byte {
-	return append(b.ParentHash, append(utils.IntToBytes(b.Height), b.Timestamp.UnixNano())...)
+	heightBytes := make([]byte, 4)
+	binary.LittleEndian.PutUint32(heightBytes, uint32(b.Height))
+
+	timestampBytes := make([]byte, 8)
+	binary.LittleEndian.PutUint64(timestampBytes, uint64(b.Timestamp.UnixNano()))
+
+	return append(b.ParentHash, append(heightBytes, timestampBytes...)...)
 }
