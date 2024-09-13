@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/devlongs/casperffg/blockchain"
-	"github.com/devlongs/casperffg/config"
-	"github.com/devlongs/casperffg/validator"
+	"github.com/devlongs/casper-ffg/blockchain"
+	"github.com/devlongs/casper-ffg/config"
+	"github.com/devlongs/casper-ffg/validator"
 )
 
 type CasperFFG struct {

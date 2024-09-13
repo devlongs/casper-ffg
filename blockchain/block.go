@@ -3,7 +3,7 @@ package blockchain
 import (
 	"time"
 
-	"github.com/devlongs/casperffg/utils"
+	"github.com/devlongs/casper-ffg/utils"
 )
 
 type Block struct {

@@ -6,8 +6,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/devlongs/casperffg/config"
-	"github.com/devlongs/casperffg/consensus"
+	"github.com/devlongs/casper-ffg/config"
+	"github.com/devlongs/casper-ffg/consensus"
 )
 
 func main() {
